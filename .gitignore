@@ -1,0 +1,6 @@
+.idea/
+data/
+__pycache__/
+dist
+build
+dragonnet.egg-info
