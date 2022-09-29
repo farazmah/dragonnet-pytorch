@@ -157,7 +157,7 @@ class DragonNet:
 
         Parameters
         ----------
-        x: torch.Tensor
+        x: torch.Tensor or numpy.array
             covariates
 
         Returns
@@ -171,6 +171,7 @@ class DragonNet:
         eps: torch.Tensor
             trainable epsilon parameter
         """
+        x = torch.Tensor(x)
         with torch.no_grad():
             y0_pred, y1_pred, t_pred, eps = self.model(x)
         return y0_pred, y1_pred, t_pred, eps
